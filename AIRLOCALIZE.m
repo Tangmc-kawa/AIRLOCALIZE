@@ -151,7 +151,7 @@ for i=1:numel(alData.fList)
             alData,params,verbose);   
 
         % detection/quantification
-        [tmpLoc,locVars] = run_gaussian_fit_on_all_spots_in_image3(...
+        [tmpLoc, locVars] = run_gaussian_fit_on_all_spots_in_image3(...
         spotCandidates,alData,params);
         
         loc = [loc; tmpLoc];
@@ -170,6 +170,3 @@ end
 disp('done.');
 
 end
-
-
-

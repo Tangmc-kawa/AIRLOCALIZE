@@ -1,0 +1,51 @@
+# file_process
+fileProcessingMode: batch  # singleFile, batch, movieInDir, singleFileMovie, batchMovie
+dataFileName: examples/PRISM_FFPE/20240331_FFPE_trial6_condition4_5um/perform
+saveDirName: examples/PRISM_FFPE/20240331_FFPE_trial6_condition4_5um/output/24.4.6-1546
+inclusionString: ''
+exclusionString: ''
+recursive: 0  # 0, 1
+output_spots_image: True
+
+# PreprocessSettings
+scale: True
+
+# FeatureExtractSettings
+featureExtract: DoG # 'none', 'DoG', 'LoG', 'DoGAndLoG'
+filterLo: 2
+filterHi: 3
+
+# detectionSettings
+psfSigma: 
+    - 2
+    - 1
+threshUnits: legacySD # absolute, SD, legacySD
+threshLevel: 10
+maxSpots: 10000
+minDistBetweenSpots: 2
+
+# fittingSettings
+fittedRegionSize: 5
+fitMethod: 3DMaskFull # 3DMaskFull, 2DMaskOnLocalMaxProj, 3DGaussianFit, 2DGaussianMask, 2DGaussianFit
+bgCorrectionMode: localPlane # localPlane, localMedian, globalMedian
+
+# outputImg
+setPsfInteractively: 0
+setThreshInteractively: 0
+outputSpotsImage: 1
+autoSpotSize: 1
+spotSize: 1
+autoSpotIntensity: 1
+spotIntensity: 1000
+
+# advanced 
+verbose: True
+useDefaults: 1
+tol: 0.01
+bgRegionThickness: 1
+psfType: integratedGaussian
+maxIterations: 20
+
+
+# internal use only
+numdim: 3

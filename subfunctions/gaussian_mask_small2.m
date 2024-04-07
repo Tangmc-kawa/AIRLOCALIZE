@@ -120,11 +120,8 @@ while (it <= maxcount && tmp > tol)
             z0(1,it) = double(sumz) / double(intsum);
             N0(1,it) = double(intsum) / double(sumsum); 
             
-            if   location_out_of_ROI(...
-                    [x0(1,it),y0(1,it),z0(1,it)],...
-                    [xp_min,xp_max,yp_min,yp_max,zp_min,zp_max],[dx,dy,dz])
-                   [x0(1,it),y0(1,it),z0(1,it),N0(1,it)] = ...
-                       deal(-1,-1,-1,-1);
+            if   location_out_of_ROI([x0(1,it),y0(1,it),z0(1,it)], [xp_min,xp_max,yp_min,yp_max,zp_min,zp_max], [dx,dy,dz])
+                   [x0(1,it),y0(1,it),z0(1,it),N0(1,it)] = deal(-1,-1,-1,-1);
             end      
         end
 

@@ -18,6 +18,7 @@ switch params.fitMethod
         end    
         cutWidth = [ceil(params.fittedRegionSize*params.psfSigma(1)),...
             ceil(params.fittedRegionSize*params.psfSigma(2))];        
+    
     case '2DMaskOnLocalMaxProj'
         loc = zeros(nSpots,6+alData.isMovie); 
         locVars = {'x_in_pix','y_in_pix','z_in_pix',...
@@ -27,6 +28,7 @@ switch params.fitMethod
         end
         cutWidth = [ceil(params.fittedRegionSize*params.psfSigma(1)),...
             ceil(params.fittedRegionSize*params.psfSigma(2))];        
+    
     case '3DGaussianFit'
         loc = zeros(nSpots,8+alData.isMovie);  
         locVars = {'x_in_pix','y_in_pix','z_in_pix',...
@@ -36,6 +38,7 @@ switch params.fitMethod
         end
         cutWidth = [ceil(params.fittedRegionSize*params.psfSigma(1)),...
             ceil(params.fittedRegionSize*params.psfSigma(2))];  
+    
     case '2DGaussianMask'
         loc = zeros(nSpots,4+alData.isMovie);   
         locVars = {'x_in_pix','y_in_pix',...
@@ -44,6 +47,7 @@ switch params.fitMethod
                 locVars = [locVars,'frame'];
         end
         cutWidth = ceil(params.fittedRegionSize*params.psfSigma(1));          
+    
     case '2DGaussianFit'
         loc = zeros(nSpots,6+alData.isMovie);  
         locVars = {'x_in_pix','y_in_pix',...
@@ -52,6 +56,7 @@ switch params.fitMethod
                 locVars = [locVars,'frame'];
         end
         cutWidth = ceil(params.fittedRegionSize*params.psfSigma(1)); 
+        
     otherwise
         if ischar(params.fitMethod)
             disp(['fit entry : ''',params.fitMethod,...
