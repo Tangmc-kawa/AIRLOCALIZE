@@ -1,7 +1,7 @@
 # file_process
 fileProcessingMode: batch  # singleFile, batch, movieInDir, singleFileMovie, batchMovie
-dataFileName: examples/PRISM_FFPE/20240331_FFPE_trial6_condition4_5um/perform
-saveDirName: examples/PRISM_FFPE/20240331_FFPE_trial6_condition4_5um/output/24.4.6-1546
+dataFileName: dataset/examples/
+saveDirName: dataset/examples/
 inclusionString: ''
 exclusionString: ''
 recursive: 0  # 0, 1
